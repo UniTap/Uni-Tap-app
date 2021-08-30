@@ -10,6 +10,7 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  bool animation = false;
   @override
   void initState() {
     super.initState();
@@ -17,7 +18,10 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   _navigatetohome() async {
-    await Future.delayed(Duration(milliseconds: 1500), () {});
+    setState(() {
+      animation = true;
+    });
+    await Future.delayed(Duration(seconds: 2), () {});
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => HomePage()));
   }
@@ -29,11 +33,14 @@ class _SplashPageState extends State<SplashPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(child: Image.asset("images/logo_grp_icon.png")),
             Container(
-              child: Text(
-                "Splash Screen",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              child: Image.asset("images/logo_grp_icon.png"),
+            ),
+            Container(
+              width: 200,
+              child: LinearProgressIndicator(
+                color: Colors.orange,
+                backgroundColor: Colors.orange[100],
               ),
             ),
           ],
