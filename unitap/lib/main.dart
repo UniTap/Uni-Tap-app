@@ -12,7 +12,7 @@ class UniTap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Uni-Tap2',
+      title: 'Uni-Tap',
       theme: new ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
