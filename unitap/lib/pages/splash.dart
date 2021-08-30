@@ -31,9 +31,10 @@ class _SplashPageState extends State<SplashPage> {
           children: [
             Container(child: Image.asset("images/logo_grp_icon.png")),
             Container(
-              child: Text(
-                "Splash Screen",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              width: 150,
+              child: LinearProgressIndicator(
+                color: Colors.orange,
+                backgroundColor: Colors.orange[100],
               ),
             ),
           ],
