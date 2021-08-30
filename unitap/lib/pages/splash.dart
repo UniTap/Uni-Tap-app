@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:unitap/pages/home.dart';
-import 'package:unitap/routes/routes.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -37,7 +36,7 @@ class _SplashPageState extends State<SplashPage> {
               child: Image.asset("images/logo_grp_icon.png"),
             ),
             Container(
-              width: 200,
+              width: 150,
               child: LinearProgressIndicator(
                 color: Colors.orange,
                 backgroundColor: Colors.orange[100],

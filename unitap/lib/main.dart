@@ -12,6 +12,10 @@ class UniTap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Uni-Tap',
+      theme: new ThemeData(
+        primarySwatch: Colors.deepOrange,
+      ),
       initialRoute: MyRoutes.splashRoute,
       routes: {
         MyRoutes.homeRoute: (context) => HomePage(),
