@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:unitap/pages/home.dart';
+import 'package:unitap/pages/login.dart';
+// import 'package:unitap/routes/routes.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -13,16 +14,13 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    _navigatetohome();
+    _navigatetologin();
   }
 
-  _navigatetohome() async {
-    setState(() {
-      animation = true;
-    });
-    await Future.delayed(Duration(seconds: 2), () {});
+  _navigatetologin() async {
+    await Future.delayed(Duration(milliseconds: 1500), () {});
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => HomePage()));
+        context, MaterialPageRoute(builder: (context) => LoginPage()));
   }
 
   @override
