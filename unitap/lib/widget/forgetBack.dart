@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:unitap/pages/newuser.page.dart';
 
-class FirstTime extends StatefulWidget {
+class ForgetBack extends StatefulWidget {
+  const ForgetBack({Key? key}) : super(key: key);
+
   @override
-  _FirstTimeState createState() => _FirstTimeState();
+  _ForgetBackState createState() => _ForgetBackState();
 }
 
-class _FirstTimeState extends State<FirstTime> {
+class _ForgetBackState extends State<ForgetBack> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,7 +19,7 @@ class _FirstTimeState extends State<FirstTime> {
         child: Row(
           children: <Widget>[
             Text(
-              'Your first time?',
+              'Remembered?',
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white70,
@@ -32,7 +34,7 @@ class _FirstTimeState extends State<FirstTime> {
                     MaterialPageRoute(builder: (context) => NewUser()));
               },
               child: Text(
-                'Sign up',
+                'Sign in',
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.white,
