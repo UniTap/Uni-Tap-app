@@ -1,19 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:unitap/widget/button.dart';
 import 'package:unitap/widget/first.dart';
-import 'package:unitap/widget/forgetbutton.dart';
+import 'package:unitap/widget/forgetBack.dart';
+import 'package:unitap/widget/forgetEmail.dart';
+import 'package:unitap/widget/forgetOk.dart';
+import 'package:unitap/widget/forgetverticaltext.dart';
 import 'package:unitap/widget/forgot.dart';
 import 'package:unitap/widget/inputEmail.dart';
 import 'package:unitap/widget/password.dart';
 import 'package:unitap/widget/textLogin.dart';
+import 'package:unitap/widget/textforget.dart';
 import 'package:unitap/widget/verticalText.dart';
 
-class LoginPage extends StatefulWidget {
+class ForgetPage extends StatefulWidget {
+  const ForgetPage({Key? key}) : super(key: key);
+
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _ForgetPageState createState() => _ForgetPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _ForgetPageState extends State<ForgetPage>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(vsync: this);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,17 +50,12 @@ class _LoginPageState extends State<LoginPage> {
             Column(
               children: <Widget>[
                 Row(children: <Widget>[
-                  VerticalText(),
-                  TextLogin(),
+                  ForgetVerticalText(),
+                  TextForget(),
                 ]),
-                InputEmail(),
-                PasswordInput(),
-                SizedBox(
-                  height: 15,
-                ),
-                ForgetButton(),
-                ButtonLogin(),
-                FirstTime(),
+                ForgetEmail(),
+                ForgetOK(),
+                ForgetBack(),
               ],
             ),
           ],
