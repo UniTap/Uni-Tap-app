@@ -39,6 +39,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 ForgetButton(),
                 ButtonLogin(),
+                SizedBox(
+                  height: 15,
+                ),
                 FirstTime(),
               ],
             ),

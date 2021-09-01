@@ -19,19 +19,22 @@ class _ForgetBackState extends State<ForgetBack> {
         child: Row(
           children: <Widget>[
             Text(
-              'Remembered Password?',
+              'Remembered?',
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white70,
               ),
             ),
-            TextButton(
-              onPressed: () {
+            SizedBox(
+              width: 10,
+            ),
+            InkWell(
+              onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => NewUser()));
               },
               child: Text(
-                'Sign up',
+                'Sign in',
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.white,

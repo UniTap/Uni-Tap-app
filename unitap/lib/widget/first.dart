@@ -23,8 +23,11 @@ class _FirstTimeState extends State<FirstTime> {
                 color: Colors.white70,
               ),
             ),
-            TextButton(
-              onPressed: () {
+            SizedBox(
+              width: 10,
+            ),
+            InkWell(
+              onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => NewUser()));
               },

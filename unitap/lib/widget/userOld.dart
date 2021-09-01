@@ -19,8 +19,11 @@ class UserOld extends StatelessWidget {
                 color: Colors.white70,
               ),
             ),
-            TextButton(
-              onPressed: () {
+            SizedBox(
+              width: 10,
+            ),
+            InkWell(
+              onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => LoginPage()));
               },
