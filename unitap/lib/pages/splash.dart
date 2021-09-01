@@ -10,6 +10,7 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  bool animation = false;
   @override
   void initState() {
     super.initState();
@@ -29,7 +30,9 @@ class _SplashPageState extends State<SplashPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(child: Image.asset("images/logo_grp_icon.png")),
+            Container(
+              child: Image.asset("images/logo_grp_icon.png"),
+            ),
             Container(
               width: 150,
               child: LinearProgressIndicator(

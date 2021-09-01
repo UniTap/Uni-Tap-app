@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unitap/pages/home.dart';
+import 'package:unitap/widget/inputEmail.dart';
 
 class ButtonLogin extends StatefulWidget {
   @override
@@ -7,6 +8,14 @@ class ButtonLogin extends StatefulWidget {
 }
 
 class _ButtonLoginState extends State<ButtonLogin> {
+  final _formKey = GlobalKey<FormState>();
+  movetohome(BuildContext context) async {
+    //if (_formKey.currentState!.validate()) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => HomePage()));
+    // }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -38,8 +47,7 @@ class _ButtonLoginState extends State<ButtonLogin> {
               TextButton(
                 onPressed: () {
                   // TODO : Integrate the password manager here.
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                  movetohome(context);
                 },
                 child: Center(
                   child: Text(
