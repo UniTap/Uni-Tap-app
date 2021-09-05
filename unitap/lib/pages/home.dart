@@ -6,8 +6,29 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Uni-Tap"),
+      body: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: const TabBar(
+              tabs: [
+                Tab(
+                  text: "Feeds",
+                ),
+                Tab(
+                  text: "College",
+                ),
+                Tab(
+                  text: "Chat",
+                ),
+              ],
+            ),
+            title: const Text('Uni-Tap'),
+          ),
+          body: const TabBarView(
+            children: [Text("Feeds"), Text("College"), Text("Chat")],
+          ),
+        ),
       ),
     );
   }
