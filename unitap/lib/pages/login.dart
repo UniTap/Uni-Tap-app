@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:unitap/widget/button.dart';
 import 'package:unitap/widget/first.dart';
 import 'package:unitap/widget/forgetbutton.dart';
-import 'package:unitap/widget/forgot.dart';
 import 'package:unitap/widget/inputEmail.dart';
 import 'package:unitap/widget/password.dart';
 import 'package:unitap/widget/textLogin.dart';

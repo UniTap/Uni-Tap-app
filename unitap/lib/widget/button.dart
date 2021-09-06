@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:unitap/pages/home.dart';
-import 'package:unitap/widget/inputEmail.dart';
 
 class ButtonLogin extends StatefulWidget {
   @override
@@ -46,7 +45,6 @@ class _ButtonLoginState extends State<ButtonLogin> {
             children: <Widget>[
               TextButton(
                 onPressed: () {
-                  // TODO : Integrate the password manager here.
                   movetohome(context);
                 },
                 child: Center(

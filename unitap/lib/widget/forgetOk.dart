@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:unitap/pages/home.dart';
-import 'package:unitap/widget/inputEmail.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class ForgetOK extends StatefulWidget {
   const ForgetOK({Key? key}) : super(key: key);
