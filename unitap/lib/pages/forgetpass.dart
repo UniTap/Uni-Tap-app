@@ -5,14 +5,14 @@ import 'package:unitap/widget/forgetOk.dart';
 import 'package:unitap/widget/forgetverticaltext.dart';
 import 'package:unitap/widget/textforget.dart';
 
-class ForgetPage extends StatefulWidget {
-  const ForgetPage({Key? key}) : super(key: key);
+class ForgetPasswordPage extends StatefulWidget {
+  const ForgetPasswordPage({Key? key}) : super(key: key);
 
   @override
   _ForgetPageState createState() => _ForgetPageState();
 }
 
-class _ForgetPageState extends State<ForgetPage>
+class _ForgetPageState extends State<ForgetPasswordPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
