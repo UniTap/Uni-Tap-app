@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unitap/pages/feeds.dart';
 import 'package:unitap/pages/forgetpass.dart';
 import 'package:unitap/pages/splash.dart';
 import 'package:unitap/pages/login.dart';
@@ -25,6 +26,7 @@ class UniTap extends StatelessWidget {
         MyRoutes.loginRoute: (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.forgetRoute: (context) => ForgetPasswordPage(),
+        MyRoutes.feedPage: (context) => FeedPage(),
       },
     );
   }

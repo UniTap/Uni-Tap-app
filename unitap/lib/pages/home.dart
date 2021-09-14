@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unitap/pages/feeds.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class HomePage extends StatelessWidget {
             title: const Text('Uni-Tap'),
           ),
           body: const TabBarView(
-            children: [Text("Feeds"), Text("College"), Text("Chat")],
+            children: [FeedPage(), Text("College"), Text("Chat")],
           ),
         ),
       ),
