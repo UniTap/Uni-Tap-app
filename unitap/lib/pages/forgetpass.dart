@@ -1,25 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:unitap/widget/button.dart';
-import 'package:unitap/widget/first.dart';
 import 'package:unitap/widget/forgetBack.dart';
 import 'package:unitap/widget/forgetEmail.dart';
 import 'package:unitap/widget/forgetOk.dart';
 import 'package:unitap/widget/forgetverticaltext.dart';
-import 'package:unitap/widget/forgot.dart';
-import 'package:unitap/widget/inputEmail.dart';
-import 'package:unitap/widget/password.dart';
-import 'package:unitap/widget/textLogin.dart';
 import 'package:unitap/widget/textforget.dart';
-import 'package:unitap/widget/verticalText.dart';
 
-class ForgetPage extends StatefulWidget {
-  const ForgetPage({Key? key}) : super(key: key);
+class ForgetPasswordPage extends StatefulWidget {
+  const ForgetPasswordPage({Key? key}) : super(key: key);
 
   @override
   _ForgetPageState createState() => _ForgetPageState();
 }
 
-class _ForgetPageState extends State<ForgetPage>
+class _ForgetPageState extends State<ForgetPasswordPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 

@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:unitap/widget/button.dart';
-import 'package:unitap/widget/first.dart';
 import 'package:unitap/widget/forgetbutton.dart';
-import 'package:unitap/widget/forgot.dart';
-import 'package:unitap/widget/inputEmail.dart';
-import 'package:unitap/widget/password.dart';
-import 'package:unitap/widget/textLogin.dart';
-import 'package:unitap/widget/verticalText.dart';
+import 'package:unitap/pages/home.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -14,6 +8,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final _formKey = GlobalKey<FormState>();
+  movetohome(BuildContext context) async {
+    if (_formKey.currentState!.validate()) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomePage()));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,20 +31,156 @@ class _LoginPageState extends State<LoginPage> {
             Column(
               children: <Widget>[
                 Row(children: <Widget>[
-                  VerticalText(),
-                  TextLogin(),
+                  //********** Header Part ***********//
+                  // ROTATED TEXT
+                  Padding(
+                    padding: const EdgeInsets.only(top: 60, left: 10),
+                    child: RotatedBox(
+                        quarterTurns: -1,
+                        child: Text(
+                          'Sign in',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 38,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        )),
+                  ),
+                  // HEADER TEXT
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30.0, left: 10.0),
+                    child: Container(
+                      // color: Colors.orange[300],
+                      height: 200,
+                      width: 200,
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            height: 60,
+                          ),
+                          Center(
+                            child: Text(
+                              'A world of possibility in an app',
+                              style: TextStyle(
+                                fontSize: 24,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ]),
-                InputEmail(),
-                PasswordInput(),
-                SizedBox(
-                  height: 15,
+
+                //********** Form Part ***********//
+                // EMAIL INPUT
+                Padding(
+                  padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
+                  child: Container(
+                    height: 60,
+                    width: MediaQuery.of(context).size.width,
+                    child: Form(
+                      key: _formKey,
+                      child: TextFormField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          fillColor: Colors.orange,
+                          labelText: 'Name',
+                          labelStyle: TextStyle(
+                            color: Colors.white70,
+                          ),
+                        ),
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            // TODO: Add a snackbar here.
+                            return "username cannot be empty";
+                          }
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                // PASSWORD INPUT
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 20, left: 50, right: 50, bottom: 15),
+                  child: Container(
+                    height: 60,
+                    width: MediaQuery.of(context).size.width,
+                    child: TextField(
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        labelText: 'Password',
+                        labelStyle: TextStyle(
+                          color: Colors.white70,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                // LOGIN BUTTON
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 40, right: 50, left: 200, bottom: 15),
+                  child: Container(
+                    alignment: Alignment.bottomRight,
+                    height: 50,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.deepOrange,
+                          blurRadius:
+                              10.0, // has the effect of softening the shadow
+                          spreadRadius:
+                              1.0, // has the effect of extending the shadow
+                          offset: Offset(
+                            5.0, // horizontal, move right 10
+                            5.0, // vertical, move down 10
+                          ),
+                        ),
+                      ],
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          TextButton(
+                            onPressed: () {
+                              movetohome(context);
+                            },
+                            child: Center(
+                              child: Text(
+                                'OK',
+                                style: TextStyle(
+                                  color: Colors.orange,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: Colors.orange,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
                 ForgetButton(),
-                ButtonLogin(),
-                SizedBox(
-                  height: 15,
-                ),
-                FirstTime(),
               ],
             ),
           ],

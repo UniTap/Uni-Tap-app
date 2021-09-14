@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:unitap/pages/newuser.page.dart';
+import 'package:unitap/pages/login.dart';
 
 class ForgetBack extends StatefulWidget {
   const ForgetBack({Key? key}) : super(key: key);
@@ -31,7 +31,7 @@ class _ForgetBackState extends State<ForgetBack> {
             InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => NewUser()));
+                    MaterialPageRoute(builder: (context) => LoginPage()));
               },
               child: Text(
                 'Sign in',

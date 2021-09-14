@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unitap/pages/forgetpass.dart';
-import 'package:unitap/pages/home.dart';
-import 'package:unitap/widget/inputEmail.dart';
 
 class ForgetButton extends StatefulWidget {
-  const ForgetButton({Key? key}) : super(key: key);
-
   @override
   _ForgetButtonState createState() => _ForgetButtonState();
 }
@@ -16,7 +12,7 @@ class _ForgetButtonState extends State<ForgetButton>
   movetoforgetpage(BuildContext context) async {
     //if (_formKey.currentState!.validate()) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => ForgetPage()));
+        context, MaterialPageRoute(builder: (context) => ForgetPasswordPage()));
     // }
   }
 
@@ -62,7 +58,6 @@ class _ForgetButtonState extends State<ForgetButton>
             children: <Widget>[
               TextButton(
                 onPressed: () {
-                  // TODO : Integrate the password manager here.
                   movetoforgetpage(context);
                 },
                 child: Center(
