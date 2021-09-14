@@ -24,7 +24,7 @@ class UniTap extends StatelessWidget {
         MyRoutes.splashRoute: (context) => SplashPage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.forgetRoute: (context) => ForgetPage(),
+        MyRoutes.forgetRoute: (context) => ForgetPasswordPage(),
       },
     );
   }
