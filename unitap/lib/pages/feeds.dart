@@ -26,18 +26,7 @@ class _FeedPageState extends State<FeedPage> {
                   itemCount: items == null ? 0 : items.length,
                   itemBuilder: (context, index) {
                     return Card(
-                      elevation: 5,
-                      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                      child: Container(
-                        child: Row(
-                          children: [
-                            Text(items[index].name.toString()),
-                            Text(items[index].age.toString()),
-                            Text(items[index].gender.toString()),
-                            Text(items[index].enrno.toString()),
-                          ],
-                        ),
-                      ),
+                      color: Colors.black,
                     );
                   });
             } else {

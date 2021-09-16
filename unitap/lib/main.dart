@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:unitap/pages/feeds.dart';
 import 'package:unitap/pages/forgetpass.dart';
 import 'package:unitap/pages/splash.dart';
@@ -7,6 +8,10 @@ import 'package:unitap/pages/home.dart';
 import 'package:unitap/routes/routes.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, // transparent status bar
+  ));
   runApp(UniTap());
 }
 

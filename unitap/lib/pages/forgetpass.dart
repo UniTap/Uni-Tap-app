@@ -143,7 +143,9 @@ class _ForgetPageState extends State<ForgetPasswordPage> {
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          okpressed(context);
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
