@@ -1,31 +1,42 @@
 [
     {
         "name" : "Smil Thakur",
+        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
         "age " : 18,
         "gender" : "Male",
+        "tweet" : "Tera Vaii jogindar!",
         "Enrollment number": 201310132064
     },
     {
         "name" : "Nandan ",
+        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
         "age " : 18,
         "gender" : "Male",
+        "tweet" : "Uni-Tap will be unicorn in 3 yrs",
         "Enrollment number": 201310132064
     },
     {
         "name" : "Mann",
+        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
         "age " : 18,
         "gender" : "Male",
+        "tweet" : "Nandan is right about Uni-Tap",
         "Enrollment number": 201310132064
     },
     {
         "name" : "Prithvi raj",
+        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
         "age " : 18,
         "gender" : "Male",
+        "tweet" : "my surname is chauhan",
         "Enrollment number": 201310132064
     },{
         "name" : "Prithvi raj 2",
+        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
         "age " : 18,
         "gender" : "Male",
+        "tweet" : "I was just made to check weather json file is woring or not lol",
+
         "Enrollment number": 201310132064
     }
 ]
