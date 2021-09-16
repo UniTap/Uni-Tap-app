@@ -1,0 +1,4 @@
+Text(items[index].name.toString()),
+                            Text(items[index].age.toString()),
+                            Text(items[index].gender.toString()),
+                            Text(items[index].enrno.toString()),

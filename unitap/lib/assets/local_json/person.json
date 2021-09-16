@@ -18,7 +18,12 @@
         "Enrollment number": 201310132064
     },
     {
-        "name" : "Prithvi",
+        "name" : "Prithvi raj",
+        "age " : 18,
+        "gender" : "Male",
+        "Enrollment number": 201310132064
+    },{
+        "name" : "Prithvi raj 2",
         "age " : 18,
         "gender" : "Male",
         "Enrollment number": 201310132064

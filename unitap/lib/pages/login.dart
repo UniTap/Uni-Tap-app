@@ -147,6 +147,14 @@ class _LoginPageState extends State<LoginPage> {
 
                             ScaffoldMessenger.of(context)
                                 .showSnackBar(snackBar);
+                          } else if (value.length < 8) {
+                            nextpage2 = false;
+                            const snackBar = SnackBar(
+                                content: Text(
+                                    'Password should be minimum 8 characters!'));
+
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
                           } else {
                             nextpage2 = true;
                           }
@@ -181,7 +189,9 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          movetohome(context);
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -237,7 +247,9 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          movetoforgetpage(context);
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
