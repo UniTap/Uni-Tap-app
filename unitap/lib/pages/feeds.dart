@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:unitap/pages/persondata.dart';
 import 'package:flutter/services.dart' as rootBundle;
 
@@ -15,7 +16,7 @@ class _FeedPageState extends State<FeedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white70,
+      backgroundColor: const Color(0xfff3f3f3),
       body: FutureBuilder(
           future: readjsondata(),
           builder: (context, data) {
@@ -24,23 +25,28 @@ class _FeedPageState extends State<FeedPage> {
             } else if (data.hasData) {
               var items = data.data as List<persondata>;
               return ListView.builder(
+                  physics: BouncingScrollPhysics(
+                      parent: AlwaysScrollableScrollPhysics()),
                   itemCount: items == null ? 0 : items.length,
                   itemBuilder: (context, index) {
                     return Container(
                       decoration: BoxDecoration(
+                        //color: Colors.yellow,
                         //border: Border.all(),
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 5.0,
-                            spreadRadius: -1.5,
-                          )
-                        ],
+                        borderRadius: BorderRadius.circular(20),
+
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //     color: Colors.grey,
+                        //     blurRadius: 5.0,
+                        //     spreadRadius: 1.0,
+                        //   )
+                        // ],
                       ),
 
-                      height: 200,
+                      // height: (items[index].tweetimage.toString() != "")
+                      //     ? 350
+                      //     : 200,
                       //alignment: Alignment.topLeft,
                       child: Column(
                         children: [
@@ -59,21 +65,37 @@ class _FeedPageState extends State<FeedPage> {
                                     borderRadius: BorderRadius.circular(100)),
                               ),
                               Container(
-                                  child: Text(
-                                items[index].name.toString(),
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
+                                  child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(items[index].name.toString(),
+                                      style: GoogleFonts.raleway(
+                                          fontWeight: FontWeight.bold)),
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                    child: Text(
+                                      items[index].username.toString(),
+                                      style: TextStyle(
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ],
                               ))
                             ],
                           ),
                           Container(
-                            height: 100,
+                            // height: (items[index].tweetimage.toString() != "")
+                            //     ? 210
+                            //     : 110,
+                            //constraints: BoxConstraints(minHeight: 100),
                             width: 500,
                             margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
+                              //color: const Color(0xfff3f3f3),
+                              borderRadius: BorderRadius.circular(20),
                               boxShadow: [
                                 // BoxShadow(
                                 //   color: Colors.orange,
@@ -83,10 +105,30 @@ class _FeedPageState extends State<FeedPage> {
                               ],
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                items[index].tweet.toString(),
-                                style: TextStyle(fontSize: 20.0),
+                              padding: const EdgeInsets.all(20.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(items[index].tweet.toString(),
+                                      style: GoogleFonts.roboto()),
+                                  (items[index].tweetimage.toString() != "")
+                                      ? SizedBox(
+                                          height: 10,
+                                        )
+                                      : SizedBox(),
+                                  (items[index].tweetimage.toString() != "")
+                                      ? ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image(
+                                            image: NetworkImage(items[index]
+                                                .tweetimage
+                                                .toString()),
+                                            //height: 150,
+                                          ),
+                                        )
+                                      : Text(""),
+                                ],
                               ),
                             ),
                           )
@@ -107,7 +149,7 @@ class _FeedPageState extends State<FeedPage> {
   Future<List<persondata>> readjsondata() async {
     final jsondata = await rootBundle.rootBundle
         .loadString('lib/assets/local_json/person.json');
-    final list = json.decode(jsondata) as List<dynamic>;
+    final list = json.decode(jsondata) as List;
 
     return list.map((e) => persondata.fromJson(e)).toList();
   }
