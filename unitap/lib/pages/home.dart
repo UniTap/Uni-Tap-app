@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            toolbarHeight: 70,
+            toolbarHeight: 100,
             automaticallyImplyLeading: false,
             bottom: const TabBar(
               tabs: [
