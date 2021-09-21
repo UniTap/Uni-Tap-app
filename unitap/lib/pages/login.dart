@@ -13,12 +13,19 @@ class _LoginPageState extends State<LoginPage> {
   bool nextpage2 = true;
 
   movetohome(BuildContext context) async {
-    if (_formKey.currentState!.validate() &&
-        nextpage == true &&
-        nextpage2 == true) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomePage()));
-    }
+    // *************** Uncomment when deployed ***************
+    // if (_formKey.currentState!.validate() &&
+    //     nextpage == true &&
+    //     nextpage2 == true) {
+    //   Navigator.push(
+    //       context, MaterialPageRoute(builder: (context) => HomePage()));
+    // }
+    // *************** Uncomment when deployed ***************
+
+    // *************** Development Code ***************
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => HomePage()));
+    // *************** Development Code  End ***************
   }
 
   movetoforgetpage(BuildContext context) async {
@@ -219,7 +226,6 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-
                   //********** Form Over ***********//
 
                   // FORGET PASSWORD BUTTON
