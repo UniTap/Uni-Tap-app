@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unitap/pages/feeds.dart';
+import 'package:unitap/pages/college.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
                 Center(child: Text('Uni-Tap', style: GoogleFonts.righteous())),
           ),
           body: const TabBarView(
-            children: [FeedPage(), Text("College"), Text("Chat")],
+            children: [FeedPage(), CollegePage(), Text("Chat")],
           ),
         ),
       ),

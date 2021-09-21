@@ -27,7 +27,7 @@ class _FeedPageState extends State<FeedPage> {
               return ListView.builder(
                   physics: BouncingScrollPhysics(
                       parent: AlwaysScrollableScrollPhysics()),
-                  itemCount: items == null ? 0 : items.length,
+                  itemCount: items.length,
                   itemBuilder: (context, index) {
                     return Container(
                       decoration: BoxDecoration(
