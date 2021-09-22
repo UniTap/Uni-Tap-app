@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:unitap/pages/feeds.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:unitap/pages/newtweet.dart';
+import 'package:unitap/routes/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -29,6 +31,12 @@ class HomePage extends StatelessWidget {
             ),
             title:
                 Center(child: Text('Uni-Tap', style: GoogleFonts.righteous())),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              Navigator.pushNamed(context, MyRoutes.newtweet);
+            },
+            child: Icon(Icons.edit),
           ),
           body: const TabBarView(
             children: [FeedPage(), Text("College"), Text("Chat")],
