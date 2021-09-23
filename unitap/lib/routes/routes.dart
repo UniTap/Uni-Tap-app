@@ -4,4 +4,5 @@ class MyRoutes {
   static String homeRoute = "/home";
   static String forgetRoute = "/forget";
   static String feedPage = "/feeds";
+  static String newtweet = "/newtweet";
 }
