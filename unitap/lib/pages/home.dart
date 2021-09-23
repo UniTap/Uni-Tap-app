@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unitap/pages/feeds.dart';
+import 'package:unitap/pages/college.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:unitap/pages/newtweet.dart';
 import 'package:unitap/routes/routes.dart';
@@ -39,7 +40,7 @@ class HomePage extends StatelessWidget {
             child: Icon(Icons.edit),
           ),
           body: const TabBarView(
-            children: [FeedPage(), Text("College"), Text("Chat")],
+            children: [FeedPage(), CollegePage(), Text("Chat")],
           ),
         ),
       ),

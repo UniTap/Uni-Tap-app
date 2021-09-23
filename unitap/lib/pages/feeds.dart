@@ -26,16 +26,15 @@ class _FeedPageState extends State<FeedPage> {
               var items = data.data as List<persondata>;
 
               return ListView.builder(
-                physics: BouncingScrollPhysics(
-                    parent: AlwaysScrollableScrollPhysics()),
-                itemCount: items == null ? 0 : items.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      //color: Colors.yellow,
-
-                      //border: Border.all(),
-                      borderRadius: BorderRadius.circular(20),
+                  physics: BouncingScrollPhysics(
+                      parent: AlwaysScrollableScrollPhysics()),
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        //color: Colors.yellow,
+                        //border: Border.all(),
+                        borderRadius: BorderRadius.circular(20),
 
                       // boxShadow: [
                       //   BoxShadow(
