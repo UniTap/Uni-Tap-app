@@ -1,9 +1,4 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:unitap/pages/persondata.dart';
-import 'package:flutter/services.dart' as rootBundle;
 
 /// Flutter code sample for Card
 

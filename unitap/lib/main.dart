@@ -9,9 +9,9 @@ import 'package:unitap/pages/home.dart';
 import 'package:unitap/routes/routes.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent, // transparent status bar
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark, // transparent status bar
   ));
   runApp(UniTap());
 }
