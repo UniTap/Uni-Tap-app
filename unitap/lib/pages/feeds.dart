@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:unitap/pages/persondata.dart';
 import 'package:flutter/services.dart' as rootBundle;
+import 'package:unitap/routes/routes.dart';
 
 class FeedPage extends StatefulWidget {
   const FeedPage({Key? key}) : super(key: key);
@@ -16,6 +17,12 @@ class _FeedPageState extends State<FeedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.newtweet);
+        },
+        child: Icon(Icons.edit),
+      ),
       backgroundColor: const Color(0xfff3f3f3),
       body: FutureBuilder(
           future: readjsondata(),
@@ -26,15 +33,15 @@ class _FeedPageState extends State<FeedPage> {
               var items = data.data as List<persondata>;
 
               return ListView.builder(
-                  physics: BouncingScrollPhysics(
-                      parent: AlwaysScrollableScrollPhysics()),
-                  itemCount: items.length,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        //color: Colors.yellow,
-                        //border: Border.all(),
-                        borderRadius: BorderRadius.circular(20),
+                physics: BouncingScrollPhysics(
+                    parent: AlwaysScrollableScrollPhysics()),
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      //color: Colors.yellow,
+                      //border: Border.all(),
+                      borderRadius: BorderRadius.circular(20),
 
                       // boxShadow: [
                       //   BoxShadow(

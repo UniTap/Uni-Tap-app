@@ -1,6 +1,7 @@
+import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 class NewTweet extends StatelessWidget {
   const NewTweet({Key? key}) : super(key: key);
@@ -60,41 +61,73 @@ class NewTweet extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: Row(
-        //crossAxisAlignment: CrossAxisAlignment.start,
-        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(
-            width: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(35, 0, 0, 10),
-            child: FloatingActionButton(
-              onPressed: null,
-              child: Icon(Icons.poll),
+      // floatingActionButton: Row(
+      //   //crossAxisAlignment: CrossAxisAlignment.start,
+      //   //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //   children: [
+      //     SizedBox(
+      //       width: 10,
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.fromLTRB(35, 0, 0, 10),
+      //       child: FloatingActionButton(
+      //         onPressed: null,
+      //         child: Icon(Icons.poll),
+      //       ),
+      //     ),
+      //     Spacer(),
+      //     // SizedBox(
+      //     //   width: 100,
+      //     // ),
+      //     Padding(
+      //       padding: const EdgeInsets.only(bottom: 10),
+      //       child:
+      //           FloatingActionButton(onPressed: null, child: Icon(Icons.image)),
+      //     ),
+      //     Spacer(),
+      //     Padding(
+      //       padding: const EdgeInsets.only(bottom: 10),
+      //       child: FloatingActionButton(
+      //         onPressed: null,
+      //         child: Icon(Icons.send),
+      //       ),
+      //     ),
+      //     SizedBox(
+      //       width: 10,
+      //     ),
+      //   ],
+
+      // ),
+      floatingActionButton: Container(
+        margin: EdgeInsets.only(left: 30),
+        child: Row(
+          children: [
+            SpeedDial(
+              curve: Curves.bounceIn,
+              overlayOpacity: 0,
+              animatedIcon: AnimatedIcons.menu_close,
+              children: [
+                SpeedDialChild(
+                    child: Icon(Icons.poll),
+                    backgroundColor: Colors.blue,
+                    onTap: () {
+                      print("hello");
+                    }),
+                SpeedDialChild(
+                    child: Icon(Icons.image),
+                    backgroundColor: Colors.yellow,
+                    onTap: () {
+                      print("world");
+                    }),
+              ],
             ),
-          ),
-          Spacer(),
-          // SizedBox(
-          //   width: 100,
-          // ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 10),
-            child:
-                FloatingActionButton(onPressed: null, child: Icon(Icons.image)),
-          ),
-          Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 10),
-            child: FloatingActionButton(
+            Spacer(),
+            FloatingActionButton(
               onPressed: null,
               child: Icon(Icons.send),
             ),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
