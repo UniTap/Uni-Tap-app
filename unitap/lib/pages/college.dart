@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'package:unitap/pages/collegedata.dart';
 import 'package:flutter/services.dart' as rootBundle;
 
@@ -47,32 +48,30 @@ class _CollegePageState extends State<CollegePage> {
                                       items[index].topic.toString(),
                                       style: GoogleFonts.raleway(
                                           color: Colors.black,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 22),
                                     ),
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                                      child: Text(
-                                        items[index].name.toString(),
-                                        style: TextStyle(
-                                            color: Colors.black87,
-                                            fontWeight: FontWeight.w500),
-                                      ),
+                                    Text(
+                                      items[index].name.toString(),
+                                      style: TextStyle(
+                                          color: Colors.black87,
+                                          fontWeight: FontWeight.w500),
                                     ),
+                                    Text("Issue Date : " +
+                                        DateFormat("dd-MM-yyyy").format(
+                                            DateTime.parse(items[index]
+                                                .issue_date
+                                                .toString()))),
+                                    Text("Return Date : " +
+                                        DateFormat("dd-MM-yyyy").format(
+                                            DateTime.parse(items[index]
+                                                .return_date
+                                                .toString()))),
                                   ],
                                 ),
                                 margin: EdgeInsets.all(20),
                               )
                             ],
-                          ),
-                          Container(
-                            width: 500,
-                            margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: [],
-                            ),
                           ),
                         ],
                       ),
@@ -91,7 +90,12 @@ class _CollegePageState extends State<CollegePage> {
     final jsondata = await rootBundle.rootBundle
         .loadString('lib/assets/local_json/college.json');
     final list = json.decode(jsondata) as List;
-
-    return list.map((e) => collegedata.fromJson(e)).toList();
+    var unsorted = list.map((e) => collegedata.fromJson(e)).toList();
+    // TODO: Sort the list according to issue date
+    // print(unsorted[1].issue_date);
+    // unsorted.sort((a, b) {
+    //   var date1 = a["issue_date"].compareTo(b["issue_date"]);
+    // });
+    return unsorted;
   }
 }

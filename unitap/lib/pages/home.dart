@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:unitap/pages/feeds.dart';
 import 'package:unitap/pages/college.dart';
+import 'package:unitap/pages/chats.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
@@ -304,7 +305,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           body: const TabBarView(
-            children: [FeedPage(), CollegePage(), Text("Chat")],
+            children: [FeedPage(), CollegePage(), ChatPage()],
           ),
         ),
       ),
