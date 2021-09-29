@@ -4,15 +4,20 @@
 		"issue": "Latest Issue",
 		"name": "Data Structures",
 		"issue_date": "2018-12-10",
-		"return_date": "2018-12-10",
-		"number_of_days_left": 25
+		"return_date": "2018-12-10"
 	},
 	{
 		"topic": "Sports",
 		"issue": "Latest Issue",
 		"name": "Basketball",
 		"issue_date": "2018-12-10",
-		"return_date": "2018-12-10",
-		"number_of_days_left": 25
+		"return_date": "2018-12-10"
+	},
+	{
+		"topic": "Sports",
+		"issue": "Latest Issue",
+		"name": "Cricketball",
+		"issue_date": "2021-06-16",
+		"return_date": "2018-05-20"
 	}
 ]
