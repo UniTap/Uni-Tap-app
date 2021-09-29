@@ -169,7 +169,7 @@ class HomePage extends StatelessWidget {
                               height: 15,
                             ),
                             Text("Mobile no.: 7487081401",
-                                style: GoogleFonts.montserrat(
+                                style: GoogleFonts.inconsolata(
                                     color: Colors.white)),
                             SizedBox(
                               height: 15,
