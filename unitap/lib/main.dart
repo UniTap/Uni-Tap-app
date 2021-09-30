@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:unitap/pages/feeds.dart';
 import 'package:unitap/pages/forgetpass.dart';
 import 'package:unitap/pages/newtweet.dart';
+import 'package:unitap/pages/chats.dart';
 import 'package:unitap/pages/splash.dart';
 import 'package:unitap/pages/login.dart';
 import 'package:unitap/pages/home.dart';
@@ -33,7 +34,8 @@ class UniTap extends StatelessWidget {
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.forgetRoute: (context) => ForgetPasswordPage(),
         MyRoutes.feedPage: (context) => FeedPage(),
-        MyRoutes.newtweet: (context) => NewTweet()
+        MyRoutes.chatsRoute: (context) => ChatPage(),
+        MyRoutes.newtweet: (context) => NewTweet(),
       },
     );
   }
