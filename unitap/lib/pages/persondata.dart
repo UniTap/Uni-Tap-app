@@ -7,6 +7,7 @@ class persondata {
   String? tweet;
   String? username;
   String? tweetimage;
+  int? sem;
 
   persondata(
       {this.name,
@@ -16,7 +17,8 @@ class persondata {
       this.photo,
       this.tweet,
       this.username,
-      this.tweetimage});
+      this.tweetimage,
+      this.sem});
 
   persondata.fromJson(Map<String, dynamic> json) {
     name = json['name'];
@@ -27,5 +29,6 @@ class persondata {
     tweet = json['tweet'];
     username = json['username'];
     tweetimage = json['tweetimage'];
+    sem = json['sem'];
   }
 }

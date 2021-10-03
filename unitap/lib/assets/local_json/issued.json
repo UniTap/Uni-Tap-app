@@ -1,0 +1,58 @@
+[
+    {
+        "srno": 1,
+        "bookid": 4018,
+        "bookname": "DBMS",
+        "issuedate": "2021-09-21",
+        "returndate": "2021-09-27",
+        "remainingdays": 3
+    },
+    {
+        "srno": 1,
+        "bookid": 4018,
+        "bookname": "DBMS",
+        "ISSUE DATE": "2021-09-21",
+        "RETURN DATE": "2021-09-27",
+        "REMAINING DAYS": 3
+    },
+    {
+        "srno": 1,
+        "bookid": 4018,
+        "bookname": "DBMS",
+        "ISSUE DATE": "2021-09-21",
+        "RETURN DATE": "2021-09-27",
+        "REMAINING DAYS": 3
+    },
+    {
+        "srno": 1,
+        "bookid": 4018,
+        "bookname": "DBMS",
+        "ISSUE DATE": "2021-09-21",
+        "RETURN DATE": "2021-09-27",
+        "REMAINING DAYS": 3
+    },
+    {
+        "srno": 1,
+        "bookid": 4018,
+        "bookname": "DBMS",
+        "ISSUE DATE": "2021-09-21",
+        "RETURN DATE": "2021-09-27",
+        "REMAINING DAYS": 3
+    },
+    {
+        "srno": 1,
+        "bookid": 4018,
+        "bookname": "DBMS",
+        "ISSUE DATE": "2021-09-21",
+        "RETURN DATE": "2021-09-27",
+        "REMAINING DAYS": 3
+    },
+    {
+        "srno": 1,
+        "bookid": 4018,
+        "bookname": "DBMS",
+        "ISSUE DATE": "2021-09-21",
+        "RETURN DATE": "2021-09-27",
+        "REMAINING DAYS": 3
+    }
+]

@@ -4,6 +4,7 @@ class collegedata {
   String? name;
   DateTime? issue_date;
   DateTime? return_date;
+  String? viewmore;
 
   collegedata({
     this.topic,
@@ -11,6 +12,7 @@ class collegedata {
     this.name,
     this.issue_date,
     this.return_date,
+    this.viewmore,
   });
 
   collegedata.fromJson(Map<String, dynamic> json) {
@@ -19,5 +21,6 @@ class collegedata {
     name = json['name'];
     issue_date = DateTime.parse(json['issue_date']);
     return_date = DateTime.parse(json['return_date']);
+    viewmore = json['viewmore'];
   }
 }

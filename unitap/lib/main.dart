@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:unitap/pages/Academicrecords.dart';
+import 'package:unitap/pages/canteen.dart';
 import 'package:unitap/pages/feeds.dart';
 import 'package:unitap/pages/forgetpass.dart';
+import 'package:unitap/pages/library.dart';
 import 'package:unitap/pages/newtweet.dart';
 import 'package:unitap/pages/chats.dart';
 import 'package:unitap/pages/splash.dart';
 import 'package:unitap/pages/login.dart';
 import 'package:unitap/pages/home.dart';
+import 'package:unitap/pages/sports.dart';
 import 'package:unitap/routes/routes.dart';
 
 void main() {
@@ -36,6 +40,10 @@ class UniTap extends StatelessWidget {
         MyRoutes.feedPage: (context) => FeedPage(),
         MyRoutes.chatsRoute: (context) => ChatPage(),
         MyRoutes.newtweet: (context) => NewTweet(),
+        MyRoutes.academicrecord: (context) => AcadRec(),
+        MyRoutes.canteen: (context) => CateenPage(),
+        MyRoutes.library: (context) => LibraryPage(),
+        MyRoutes.sports: (context) => SportsPage(),
       },
     );
   }

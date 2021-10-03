@@ -1,59 +1,57 @@
 [
     {
-        "name" : "Smil Thakur",
-        "username" : "@smil",
-        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
-        "age " : 18,
-        "gender" : "Male",
-        "tweet" : "iPhone 13 series launched yeah !!",
-        "tweetimage" : "https://i.gadgets360cdn.com/large/iphone_13_pro_1631645299348.jpg?downsize=950:*",
+        "name": "Smil Thakur",
+        "username": "@smil",
+        "photo": "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
+        "age ": 18,
+        "sem": 3,
+        "gender": "Male",
+        "tweet": "iPhone 13 series launched yeah !!",
+        "tweetimage": "https://i.gadgets360cdn.com/large/iphone_13_pro_1631645299348.jpg?downsize=950:*",
         "Enrollment number": 201310132064
     },
     {
-        "name" : "Nandan ",
-        "username" : "@diode",
-
-        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
-        "age " : 18,
-        "gender" : "Male",
-        "tweet" : "Uni-Tap will be unicorn in 3 yrs",
-        "tweetimage":"",
+        "name": "Nandan ",
+        "username": "@diode",
+        "photo": "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
+        "age ": 18,
+        "sem": 4,
+        "gender": "Male",
+        "tweet": "Uni-Tap will be unicorn in 3 yrs",
+        "tweetimage": "",
         "Enrollment number": 201310132064
     },
     {
-        "name" : "Mann",
-        "username" : "@mann",
-
-        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
-        "age " : 18,
-        "gender" : "Male",
-        "tweet" : "Nandan is right about Uni-Tap",
-        "tweetimage":"",
-
+        "name": "Mann",
+        "username": "@mann",
+        "photo": "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
+        "age ": 18,
+        "sem": 5,
+        "gender": "Male",
+        "tweet": "Nandan is right about Uni-Tap",
+        "tweetimage": "",
         "Enrollment number": 201310132064
     },
     {
-        "name" : "Prithvi raj",
-        "username" : "@prithvi",
-
-        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
-        "age " : 18,
-        "gender" : "Male",
-        "tweet" : "my surname is chauhan",
-        "tweetimage":"",
-
+        "name": "Prithvi raj",
+        "username": "@prithvi",
+        "photo": "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
+        "age ": 18,
+        "sem": 6,
+        "gender": "Male",
+        "tweet": "my surname is chauhan",
+        "tweetimage": "",
         "Enrollment number": 201310132064
-    },{
-        "name" : "Prithvi raj 2",
-        "username" : "@testusername",
-
-        "photo" : "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
-        "age " : 18,
-        "gender" : "Male",
-        "tweet" : "I was just made to check weather json file is woring or not lol",
-        "tweetimage":"",
-
-
+    },
+    {
+        "name": "Prithvi raj 2",
+        "username": "@testusername",
+        "photo": "https://pbs.twimg.com/media/EX9r7gSUYAI85VZ.jpg",
+        "age ": 18,
+        "sem": 7,
+        "gender": "Male",
+        "tweet": "I was just made to check weather json file is woring or not lol",
+        "tweetimage": "",
         "Enrollment number": 201310132064
     }
 ]
