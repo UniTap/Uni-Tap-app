@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:unitap/pages/Academicrecords.dart';
 import 'package:unitap/pages/feeds.dart';
 import 'package:unitap/pages/college.dart';
 import 'package:unitap/pages/chats.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:unitap/routes/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -41,13 +43,13 @@ class HomePage extends StatelessWidget {
               child: ListView(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: Container(
                       child: Center(child: Text("SMIL RAJ THAKUR")),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: Container(
                       child: Padding(
                         padding: const EdgeInsets.all(13),
@@ -148,7 +150,7 @@ class HomePage extends StatelessWidget {
                     padding: EdgeInsets.all(8),
                     child: Container(
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(10),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -170,7 +172,7 @@ class HomePage extends StatelessWidget {
                               height: 15,
                             ),
                             Text("Mobile no.: 7487081401",
-                                style: GoogleFonts.montserrat(
+                                style: GoogleFonts.inconsolata(
                                     color: Colors.white)),
                             SizedBox(
                               height: 15,
@@ -202,9 +204,11 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, MyRoutes.academicrecord);
+                      },
                       child: Container(
                         height: 50,
                         child: Center(
@@ -226,7 +230,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: InkWell(
                       onTap: () {},
                       child: Container(
@@ -250,7 +254,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: InkWell(
                       onTap: () {},
                       child: Container(
@@ -277,7 +281,7 @@ class HomePage extends StatelessWidget {
                     height: 100,
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: InkWell(
                       onTap: () {},
                       child: Container(

@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:unitap/pages/collegedata.dart';
 import 'package:flutter/services.dart' as rootBundle;
+import 'package:unitap/routes/routes.dart';
 
 class CollegePage extends StatefulWidget {
   const CollegePage({Key? key}) : super(key: key);
@@ -67,6 +68,47 @@ class _CollegePageState extends State<CollegePage> {
                                             DateTime.parse(items[index]
                                                 .return_date
                                                 .toString()))),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 230,
+                                        ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: Colors.deepOrange,
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(10),
+                                            child: InkWell(
+                                              onTap: () {
+                                                if (items[index]
+                                                        .topic
+                                                        .toString() ==
+                                                    "Library") {
+                                                  Navigator.pushNamed(context,
+                                                      MyRoutes.library);
+                                                } else if (items[index]
+                                                        .topic
+                                                        .toString() ==
+                                                    "Sports") {
+                                                  Navigator.pushNamed(
+                                                      context, MyRoutes.sports);
+                                                } else {
+                                                  Navigator.pushNamed(context,
+                                                      MyRoutes.canteen);
+                                                }
+                                              },
+                                              child: Text("view more>"),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
                                   ],
                                 ),
                                 margin: EdgeInsets.all(20),

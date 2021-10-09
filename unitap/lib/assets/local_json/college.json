@@ -4,20 +4,23 @@
 		"issue": "Latest Issue",
 		"name": "Data Structures",
 		"issue_date": "2018-12-10",
-		"return_date": "2018-12-10"
+		"return_date": "2018-12-10",
+		"view more": "MyRoutes.academicrecord"
 	},
 	{
 		"topic": "Sports",
 		"issue": "Latest Issue",
 		"name": "Basketball",
 		"issue_date": "2018-12-10",
-		"return_date": "2018-12-10"
+		"return_date": "2018-12-10",
+		"view more": "MyRoutes.academicrecord"
 	},
 	{
-		"topic": "Sports",
+		"topic": "Canteen",
 		"issue": "Latest Issue",
 		"name": "Cricketball",
 		"issue_date": "2021-06-16",
-		"return_date": "2018-05-20"
+		"return_date": "2018-05-20",
+		"view more": "MyRoutes.academicrecord"
 	}
 ]

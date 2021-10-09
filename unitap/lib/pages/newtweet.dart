@@ -26,7 +26,7 @@ class NewTweet extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: TextFormField(
                       keyboardType: TextInputType.multiline,
                       maxLines: null,
@@ -47,7 +47,7 @@ class NewTweet extends StatelessWidget {
                   //   height: 50,
                   // ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: TextFormField(
                       keyboardType: TextInputType.multiline,
                       maxLines: null,
